@@ -12,7 +12,7 @@ layout: page
 
 <ul class="skill-list">
 	<li> All my life i been a Jack of all Trades, however i specialize for the current job =)  </li>
-	<li> I strongly believe in Loyalty, Honesty, Love & Respect. </Li> 
+	<li> I strongly believe in Loyalty, Honesty, Love & Respect. Also, i believe in Balance with one s life. You could 		also say i believe in the 80/20 rule. </Li> 
 	<li> Below you ll find some quotes that i also believe in. </li>
 	<li> Pain (/Failure) + Refeclection = Progress </li>
 	<li> Progress = Evolution </li>
