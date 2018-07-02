@@ -1,0 +1,56 @@
+---
+title: "Miiiiiiiips!"
+layout: post
+date: 2018-07-02 09:25AM
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- Mips
+- linux
+- IoT
+- Router
+star: true
+category: blog
+author: MaskedFox
+description: Beginning series of post on MIPS 
+---
+
+## Hola Wolrd!
+
+As i mentioned before, this blog is mainly for myself and anyone else that might find it useful, which is in my hope.
+Also, feel free to correct my english, its better for me and anyone else reading this. 
+All right, let's get down to business here 0_0!
+Lately, especifically for the last Month or so i been Learning Microprocessor without Interlocked Pipeline Stages AKA MIPS
+Until now i only dealth with x86 and not an expert at all on that one either. So learning MIPS was interesting first i wrote a 
+simple not even deserved to be called a reverse challenge in C and compile it in MIPS and friends did the same and share theirs with mine.
+Let me make a pause here....
+Before going to tecnical etc, let me share something with you. Learning something new can be scary, can make you feel like a fool
+and even not worthy of it or the people around it. But as i hope you discover this is just an obstacle in the way. Persevere, be humble
+and ask those who know about the subject and soon enough you ll learn and even solve challenges or problems about it. 
+Its just really about a matter of time. Be patience and persevere, take a break, etc (Might do a post on that one later)
+
+All right, back to the topic at hand here: MIPS
+In the beginning i thought about how to learn MIPS and it occured me that i shouldnt try to invent a way, but rather to get the framework
+from Azeria from azeria-labs.org
+Well that's what i thought at the moment, but when i got the challenges i inmediately, started to freak out, felt overwhelm and couldnt
+think strraight. So i decided to open a bunch of types witht the best resources in MIPS. Thats how the trouble started because i 
+could not choose one and felt more overwhelm by it. Dont do this do some research but dont let it take more than 2 hours, choose
+and stick to it =)
+
+The following is the what i think its going to help, just some of the basics layout and then how to learn any assembly language.
+First of all get some Basic C programming Knowledge
+[C Books My top 3, at least 24 hours Learning the basics ]
+
+[MIPS Layout
+  Registers
+  Instruction Set]
+  
+ [Important Resources: domains]
+ 
+ The Next Post will be about how to learn MIPS from another approach that in my opinion will make more sense (Hands on!)
+ Then on another one i ll share the common unsafety functions in C that might help in doing MIPS exploitation.
+
+
+Until next time,
+
+MaskedFox
