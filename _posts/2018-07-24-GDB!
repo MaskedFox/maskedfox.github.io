@@ -20,7 +20,7 @@ description: GDB reference
 
 Objdump:
 
-objectdump -D ProgramName | grep -A20 main:
+objdump -D ProgramName | grep -A20 main:
 #[grep -A20 main:] means: show only 20 lines from [main:]
 
 objdump -x86-asm-syntax=intel -D Firstprogram | grep -A20  main:
