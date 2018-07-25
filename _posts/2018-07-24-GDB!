@@ -17,3 +17,8 @@ description: GDB reference
 ---
 
 ## Hola World!
+
+Objdump:
+
+objectdump -D ProgramName | grep -A20 main:
+#[grep -A20 main:] means: show only 20 lines from [main:]
