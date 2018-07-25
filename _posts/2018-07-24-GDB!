@@ -22,3 +22,8 @@ Objdump:
 
 objectdump -D ProgramName | grep -A20 main:
 #[grep -A20 main:] means: show only 20 lines from [main:]
+
+objdump -x86-asm-syntax=intel -D Firstprogram | grep -A20  main:
+# For the Architecture to show as Intel, do the above ^ [-x86-asm-syntax=intel]
+
+
