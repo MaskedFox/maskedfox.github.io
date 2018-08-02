@@ -26,4 +26,33 @@ objdump -D ProgramName | grep -A20 main:
 objdump -x86-asm-syntax=intel -D Firstprogram | grep -A20  main:
 # For the Architecture to show as Intel, do the above ^ [-x86-asm-syntax=intel]
 
+GDB:
+
+gdb -q ./program
+
+set dis intel
+or (So it does it every time automatically) 
+echo "set dis intel" > ~/.gdbinit
+
+(gdb)list
+
+(gdb)disas main
+
+(gdb)b main
+
+(gdb)r
+
+gdb) i r eip
+eip            0x8048384        0x8048384 <main+16>
+(gdb) x/o 0x8048384
+0x8048384 <main+16>:    077042707
+(gdb) x/x $eip
+0x8048384 <main+16>:    0x00fc45c7
+(gdb) x/u $eip
+0x8048384 <main+16>:    16532935
+(gdb) x/t $eip
+0x8048384 <main+16>:    00000000111111000100010111000111
+
+
+
 
