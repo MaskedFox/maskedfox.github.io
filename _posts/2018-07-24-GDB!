@@ -42,6 +42,12 @@ echo "set dis intel" > ~/.gdbinit
 
 (gdb)r
 
+
+o Display in octal.
+x Display in hexadecimal.
+u Display in unsigned, standard base-10 decimal.
+t Display in binary.
+
 gdb) i r eip
 eip            0x8048384        0x8048384 <main+16>
 (gdb) x/o 0x8048384
@@ -54,5 +60,18 @@ eip            0x8048384        0x8048384 <main+16>
 0x8048384 <main+16>:    00000000111111000100010111000111
 
 
+b A single byte
+h A halfword, which is two bytes in size
+w A word, which is four bytes in size
+g A giant, which is eight bytes in size
+
+(gdb) x/8xb $eip
+0x8048384 <main+16>:    0xc7    0x45    0xfc    0x00    0x00    0x00    0x00    0x83
+(gdb) x/8xh $eip
+0x8048384 <main+16>:    0x45c7  0x00fc  0x0000  0x8300  0xfc7d  0x7e09  0xeb02  0xc713
+(gdb) x/8xw $eip
+0x8048384 <main+16>:    0x00fc45c7      0x83000000      0x7e09fc7d      0xc713eb02
+0x8048394 <main+32>:    0x84842404      0x01e80804      0x8dffffff      0x00fffc45 
+(gdb)
 
 
