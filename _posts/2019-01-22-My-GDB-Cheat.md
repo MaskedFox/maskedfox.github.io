@@ -1,3 +1,23 @@
+---
+title: "How to use GDB when Doing Dynamic Reversing"
+layout: post
+date: 2019-01-22 16:45
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- gdb
+- reversing
+- debugging
+- assembly
+- linux
+- exploit
+- buffer overflow
+star: true
+category: blog
+author: MaskedFox
+description: Basics of doing Dynamic Reversing with GDB
+---
+
 #          **How to use GDB when Doing Dynamic Reversing**
 
 ####     **My GDB Cheatsheet:**
