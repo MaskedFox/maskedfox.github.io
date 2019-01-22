@@ -18,15 +18,15 @@ author: MaskedFox
 description: Basics of doing Dynamic Reversing with GDB
 ---
 
-     **How to use GDB when Doing Dynamic Reversing**
+     #          **How to use GDB when Doing Dynamic Reversing**
 
-     **My GDB Cheatsheet:**
+####     **My GDB Cheatsheet:**
 
 **Commands:**
 
-`**Step in: si**`
+`Step in: si`
 
-`**next in: ni**`
+`next in: ni`
 
 `si` its to get inside a function, for example if i do` si` on `0x4011f6 <main+13> call getInput <0x4011b9>`, i would get into the funciton, example of using si`on the function above:
 
@@ -51,10 +51,10 @@ However, at this point we dont want to use `si`anymore, what you want to use is`
 
 So you can go through each line without getting into a function again, unless thats what you want to do.
 
-So another `Command `that is cool is `return` or `finish`
+So another `Command `that is cool is`return` or `**finish**`
 
 `return` forces the current function to return inmediately, passing the giving value
 
-`finish`continues until the current function returns
+*finish* continues until the current function returns
 
 A pretty good Cheatsheet on GDB is this [one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)
