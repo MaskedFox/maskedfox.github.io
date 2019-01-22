@@ -18,9 +18,9 @@ author: MaskedFox
 description: Basics of doing Dynamic Reversing with GDB
 ---
 
-#          **How to use GDB when Doing Dynamic Reversing**
+     **How to use GDB when Doing Dynamic Reversing**
 
-####     **My GDB Cheatsheet:**
+     **My GDB Cheatsheet:**
 
 **Commands:**
 
