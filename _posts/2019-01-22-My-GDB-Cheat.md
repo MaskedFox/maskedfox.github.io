@@ -20,6 +20,9 @@ description: Basics of doing Dynamic Reversing with GDB
 
      #          **How to use GDB when Doing Dynamic Reversing**
 
+For the last year i been doing reversing challenges and of them contained a buffer overflow. Anyways, on my last challenge which was a real life binary, i found myself not knowing how to use gdb-multi  doing a remote debugging and it super bother me because nexti or next didnt work as expect so i decided to do a quick review on it. I first started watching this video from Pentester Academy https://www.youtube.com/watch?v=RF7DF4kfs1E&list=PLwkhI3Ao_JDuCzfurQrti8_wtWnfNoPEy&index=2&t=18s
+and after i typed the code and tried the buffer overflow myself i found using step and next, i guess in real life sometimes Next or some commands wont work as expect it since we dont have any symbols etc. So this is what i learned (again). =D
+
 ####     **My GDB Cheatsheet:**
 
 **Commands:**
