@@ -54,12 +54,12 @@ However, at this point we dont want to use `si`anymore, what you want to use is`
 
 So you can go through each line without getting into a function again, unless thats what you want to do.
 
-So another `Command `that is cool is`return` or `**finish**`
+So another `Command `that is cool is`return` or `finish`
 
 `return` forces the current function to return inmediately, passing the giving value
 
 `finish` continues until the current function returns
 
-A pretty good Cheatsheet on GDB is this [one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)
+A pretty good Cheatsheet on GDB is this [one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf) and this [one!](https://www.cs.princeton.edu/courses/archive/fall16/cos432/hw2/gdb-refcard.pdf)
 
 Another Great Tutorials for GDB are [This](https://www.exploit-db.com/papers/13205) and this [one!](http://beej.us/guide/bggdb/)
