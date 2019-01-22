@@ -58,7 +58,7 @@ So another `Command `that is cool is`return` or `**finish**`
 
 `return` forces the current function to return inmediately, passing the giving value
 
-*finish* continues until the current function returns
+`finish` continues until the current function returns
 
 A pretty good Cheatsheet on GDB is this [one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)
 
