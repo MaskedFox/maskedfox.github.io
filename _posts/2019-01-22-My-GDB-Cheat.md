@@ -63,3 +63,8 @@ So another `Command `that is cool is`return` or `finish`
 A pretty good Cheatsheet on GDB is this [one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf) and this [one!](https://www.cs.princeton.edu/courses/archive/fall16/cos432/hw2/gdb-refcard.pdf)
 
 Another Great Tutorials for GDB are [This](https://www.exploit-db.com/papers/13205) and this [one!](http://beej.us/guide/bggdb/)
+
+
+To do: 
+*Get the docuements from links and upload them to github
+*Then link them here =)
