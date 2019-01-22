@@ -61,3 +61,5 @@ So another `Command `that is cool is`return` or `**finish**`
 *finish* continues until the current function returns
 
 A pretty good Cheatsheet on GDB is this [one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)
+
+Another Great Tutorials for GDB are [This](https://www.exploit-db.com/papers/13205) and this [one!](http://beej.us/guide/bggdb/)
