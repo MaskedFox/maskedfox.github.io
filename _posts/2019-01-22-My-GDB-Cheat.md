@@ -28,7 +28,7 @@ description: Basics of doing Dynamic Reversing with GDB
 
 `next in: ni`
 
-`si` its to get inside a function, for example if i do` si` on `0x4011f6 <main+13> call getInput <0x4011b9>`, i would get into the funciton, example of using si`on the function above:
+###`si` its to get inside a function, for example if i do` si` on `0x4011f6 <main+13> call getInput <0x4011b9>`, i would get ### into the funciton, example of using si`on the function above:
 
 ```
    0x4011b9        push   ebp
