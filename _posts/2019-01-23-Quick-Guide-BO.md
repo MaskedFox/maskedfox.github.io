@@ -41,17 +41,17 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 **Vulnerable code:**
 
-`pwndbg> disas main`]
-Dump of assembler code for function main:`
-` 0x004011e9 <+0>: push ebp`
-` 0x004011ea <+1>: mov ebp,esp`
-` 0x004011ec <+3>: call 0x401202 <__x86.get_pc_thunk.ax>`
-` 0x004011f1 <+8>: add eax,0x2e0f`
-` 0x004011f6 <+13>: call 0x4011b9 <getInput>` We can see there is Function call "`getInput`"
-` 0x004011fb <+18>: mov eax,0x0`
-` 0x00401200 <+23>: pop ebp`
-` 0x00401201 <+24>: ret `
-`End of assembler dump.`
+  pwndbg> disas main
+  Dump of assembler code for function main:
+  0x004011e9 <+0>: push ebp
+  0x004011ea <+1>: mov ebp,esp
+  0x004011ec <+3>: call 0x401202 <__x86.get_pc_thunk.ax>
+  0x004011f1 <+8>: add eax,0x2e0f
+  0x004011f6 <+13>: call 0x4011b9 <getInput>` We can see there is Function call "`getInput`"
+  0x004011fb <+18>: mov eax,0x0
+  0x00401200 <+23>: pop ebp
+  0x00401201 <+24>: ret 
+  End of assembler dump.
 
 ####   We should check this out, disassamble the function called "`getInput`"
   
