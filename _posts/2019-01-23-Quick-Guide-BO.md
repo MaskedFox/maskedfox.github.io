@@ -54,11 +54,11 @@ Dump of assembler code for function main:`
 `End of assembler dump.`
 
 ####   We should check this out, disassamble the function called "`getInput`"
-
-`pwndbg> disas getInput`
-`Dump of assembler code for function getInput:`
-` 0x004011b9 <+0>: push ebp`
-` 0x004011ba <+1>: mov ebp,esp`
+  
+  pwndbg> disas getInput
+  Dump of assembler code for function getInput:
+  0x004011b9 <+0>: push ebp
+  0x004011ba <+1>: mov ebp,esp
 ` 0x004011bc <+3>: push ebx`
 ` 0x004011bd <+4>: sub esp,0x8` This is how we know our Buffer is 8 bytes, because ESP is 8 bytes
 ` 0x004011c0 <+7>: call 0x4010c0 <__x86.get_pc_thunk.bx>`
