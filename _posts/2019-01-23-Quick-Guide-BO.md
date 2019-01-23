@@ -41,8 +41,8 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 **Vulnerable code:**
 
-`pwndbg> disas main`
-`Dump of assembler code for function main:`
+`pwndbg> disas main`]
+Dump of assembler code for function main:`
 ` 0x004011e9 <+0>: push ebp`
 ` 0x004011ea <+1>: mov ebp,esp`
 ` 0x004011ec <+3>: call 0x401202 <__x86.get_pc_thunk.ax>`
