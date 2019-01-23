@@ -51,7 +51,7 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
   0x004011fb <+18>: mov eax,0x0
   0x00401200 <+23>: pop ebp
   0x00401201 <+24>: ret 
-  End of assembler dump.```
+  End of assembler dump.`
 
 ####   We should check this out, disassamble the function called "`getInput`"
   
