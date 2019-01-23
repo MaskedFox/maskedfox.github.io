@@ -1,3 +1,24 @@
+---
+title: "x86 a Super quick Guide to BO:"
+layout: post
+date: 2019-01-23 18:02
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- gdb
+- reversing
+- debugging
+- assembly
+- linux
+- exploit
+- buffer overflow
+star: true
+category: blog
+author: MaskedFox
+description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
+---
+
+
 #      **x86 a Super quick Guide to BO:**
 
 ##     Basics of x86 Stack:
