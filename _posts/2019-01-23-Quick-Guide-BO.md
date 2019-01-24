@@ -28,17 +28,17 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 #### The Stack grows from High to Low and if your buffer was 8 bytes. The stack will look like this:
 
 
+```
+(High Memory)
 
-`(High Memory)`
+|RET (if nothing then 4 bytes) |
 
-`|RET (if nothing then 4 bytes) |`
+|EBP (if nothing then 4 bytes) |
 
-`|EBP (if nothing then 4 bytes) |`
+|ESP (8 bytes) |
 
-`|ESP (8 bytes) |`
-
-`(Low Memory)`
-
+(Low Memory)
+```
 
 
 ## Basics of Buffer Overflows(BO):
