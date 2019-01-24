@@ -1,3 +1,4 @@
+---
 title: "Markdown Magic, for your github blog/page Thats right...Another Cheat sheet"
 layout: post
 date: 2019-01-24 14:47
