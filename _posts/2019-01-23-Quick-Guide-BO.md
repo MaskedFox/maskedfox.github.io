@@ -25,11 +25,11 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 ## Basics of x86 Stack:
 
-#### The Stack grows from High to Low and if your buffer was 8 bytes. The stack will look like this:
+#### The Stack grows from `High to Low` and if your buffer was 8 bytes. The stack will look like this:
 
 
 ```
-(High Memory)
+(Low Memory)
 
 |RET (if nothing then 4 bytes) |
 
@@ -37,7 +37,7 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 |ESP (8 bytes) |
 
-(Low Memory)
+(High Memory)
 ```
 
 
