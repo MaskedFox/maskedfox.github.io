@@ -29,7 +29,7 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 
 ```
-(Low Memory)
+(High Memory)
 
 |RET (if nothing then 4 bytes) |
 
@@ -37,9 +37,14 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 |ESP (8 bytes) |
 
-(High Memory)
+(Low Memory)
 ```
 
+**NOTE:** while the stack grows from High to Low, dont forget and remember that the low address will keep stacking things up towards the High Memory, for example if we send the following to the buffer in order to cause a BO "AAAAAAAABBBBCCCC" it will look like this in reality:
+
+````
+|Low Memory| ESP (AAAAAAAA) | EBP(BBBB) | RET(CCCC) | High Memory |
+```
 
 ## Basics of Buffer Overflows(BO):
 
