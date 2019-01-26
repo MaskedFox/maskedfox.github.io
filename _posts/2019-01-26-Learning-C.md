@@ -24,7 +24,7 @@ description: Learning C Programming from a Computer Science Course by EDX
 
 Basics of C programming Language
 
-### [C Programming: Language Foundations](https://www.edx.org/course/c-programming-language-foundations) `Finished this one one Feb 26, 2019`
+### [C Programming: Language Foundations](https://www.edx.org/course/c-programming-language-foundations) `Finished this one one Jan 26, 2019`
 
 Master foundational concepts in the C programming language such as logical statements and arrays.
 
