@@ -1,3 +1,17 @@
+---
+title: "Learning C from the Computer Science PoV"
+layout: post
+date: 2019-01-26 15:46
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- C
+- Programming
+star: true
+category: blog
+author: MaskedFox
+description: Learning C Programming from a Computer Science Course by EDX
+---
 
 
 # Learning C from the Computer Science PoV
