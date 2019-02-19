@@ -6,7 +6,7 @@ install zsh
 install oh-my-zsh
   https://github.com/robbyrussell/oh-my-zsh
 
-OHsh plugins:
+oh-my-zsh plugins:
   https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 
 install powerlevel9k theme
@@ -37,8 +37,11 @@ Theme for VIM:
   These are scripts or configs from other people
    tmux themes
    terminal themes, just like the ones mentioned above
+   
    CHECK PS1 Variable Unix to change Prompt
-
+   INSTALL I3 and write about it
+   check i3 themes from unixporn on reddit
+   
 Important Resource:
   https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/
  
