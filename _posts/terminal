@@ -1,0 +1,14 @@
+isntall 16bit theme on gnome terminal
+install zsh
+install oHzsh
+  https://github.com/robbyrussell/oh-my-zsh
+OHsh plugins:
+  https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+install powerlevel9k theme
+install tmux
+config ssh
+  https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+
+Important Resource:
+  https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/
+ 
