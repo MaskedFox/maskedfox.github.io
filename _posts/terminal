@@ -1,13 +1,43 @@
 isntall 16bit theme on gnome terminal
+
 install zsh
+  https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
+  
 install oHzsh
   https://github.com/robbyrussell/oh-my-zsh
+
 OHsh plugins:
   https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+
 install powerlevel9k theme
+  https://github.com/bhilburn/powerlevel9k
+
 install tmux
+  apt install tmux
+
+tmux theme (although, wherver is in your terminal works on Tmux so...)
+  https://github.com/caiogondim/maglev
+  
 config ssh
   https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+
+Theme for VIM:
+  https://github.com/nanotech/jellybeans.vim#screenshots
+  also do: 
+    vim ~/.vimrc
+      syntax on
+      colorscheme pablo
+      set number
+      
+      elford
+      Pablo -> theme i chose
+      Slate
+  
+#Note i have star many other resources, check them out
+  These are scripts or configs from other people
+   tmux themes
+   terminal themes, just like the ones mentioned above
+   CHECK PS1 Variable Unix to change Prompt
 
 Important Resource:
   https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/
