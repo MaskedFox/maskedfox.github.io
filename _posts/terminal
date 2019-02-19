@@ -3,7 +3,7 @@ isntall 16bit theme on gnome terminal
 install zsh
   https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
   
-install oHzsh
+install oh-my-zsh
   https://github.com/robbyrussell/oh-my-zsh
 
 OHsh plugins:
