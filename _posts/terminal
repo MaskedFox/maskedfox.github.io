@@ -11,6 +11,8 @@ oh-my-zsh plugins:
 
 install powerlevel9k theme
   https://github.com/bhilburn/powerlevel9k
+  To do:
+    https://medium.freecodecamp.org/how-you-can-style-your-terminal-like-medium-freecodecamp-or-any-way-you-want-f499234d48bc
 
 install tmux
   apt install tmux
@@ -32,7 +34,7 @@ Theme for VIM:
       elford
       Pablo -> theme i chose
       Slate
-  
+
 #Note i have star many other resources, check them out
   These are scripts or configs from other people
    tmux themes
