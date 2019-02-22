@@ -2,7 +2,7 @@ isntall 16bit theme on gnome terminal
 
 install zsh
   https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
-  Also install this for Syntax Highlighting
+  *Also install this for Syntax Highlighting*
     https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
   
 install oh-my-zsh
@@ -19,9 +19,12 @@ install powerlevel9k theme
 install tmux
   apt install tmux
 
-tmux theme (although, wherver is in your terminal works on Tmux so...)
+Tmux theme (although, wherver is in your terminal works on Tmux so...)
   https://github.com/caiogondim/maglev
-  
+
+To enable cat files with colors:
+  https://github.com/sharkdp/bat (its a clone of cat but in rust with other features)
+
 config ssh
   https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
 
