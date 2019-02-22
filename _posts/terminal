@@ -2,6 +2,8 @@ isntall 16bit theme on gnome terminal
 
 install zsh
   https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
+  Also install this for Syntax Highlighting
+    https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
   
 install oh-my-zsh
   https://github.com/robbyrussell/oh-my-zsh
