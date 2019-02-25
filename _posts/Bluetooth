@@ -1,0 +1,16 @@
+bluetoothctl <--- It's an "app" to pair and connect bluetooth via CL
+
+Other ways to connect via bluetooth:
+  sudo apt-get install bluetooth bluez bluez-tools rfkill
+
+  sudo rfkill list
+  
+  sudo rfkill unblock bluetooth
+  
+  sudo apt-get install blueman
+  
+Once you have paired with your bluetootth Headphones you need to choose the audio profile --> A2DP from the bluetooth options
+and in the Audio Preferences you need to choose your Headphones as audio output.
+
+#Important Resources:
+  https://www.maketecheasier.com/setup-bluetooth-in-linux/
