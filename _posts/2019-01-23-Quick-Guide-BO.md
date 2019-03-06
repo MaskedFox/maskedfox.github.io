@@ -23,6 +23,32 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 # **x86 a Super quick Guide to BO:**
 
+```
+#include <stdio.h>
+
+canNeverExecute()
+{
+
+ printf("Woot Woot N Moar Woot Woot");
+ exit(0);
+ 
+}
+
+getInput()
+{
+ char buffer[8];
+ gets (buffer);
+ puts (buffer);
+}
+
+int main(void)
+{
+ getinput()
+ return 0;
+}
+
+```
+
 ## Basics of x86 Stack:
 
 #### The Stack grows from `High to Low` and if your buffer was 8 bytes. The stack will look like this:
