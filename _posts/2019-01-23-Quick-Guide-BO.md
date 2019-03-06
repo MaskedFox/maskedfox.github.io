@@ -23,6 +23,8 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 # **x86 a Super quick Guide to BO:**
 
+##Code:
+
 ```
 #include <stdio.h>
 
@@ -43,7 +45,7 @@ getInput()
 
 int main(void)
 {
- getinput()
+ getinput();
  return 0;
 }
 
