@@ -23,7 +23,7 @@ description: Basics of BUffer Overflow for x86, more like a cheatsheet =p
 
 # **x86 a Super quick Guide to BO:**
 
-##Code:
+## Code:
 
 ```
 #include <stdio.h>
