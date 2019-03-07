@@ -122,3 +122,17 @@ description: Basics of Shellcode writing
     
     
 -   #### **Use objdump to figure out the final shellcode**
+```
+root@mfox:~/Documents# objdump -d exitShellCode
+
+exitShellCode:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08049000 <_start>:
+ 8049000:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 8049005:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804900a:	cd 80                	int    $0x80
+
+```
