@@ -1,8 +1,26 @@
+---
+title: "x86 a Super quick Guide to Shellcode Writing:"
+layout: post
+date: 2019-03-07 09:56:00
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- gdb
+- reversing
+- debugging
+- assembly
+- linux
+- exploit
+- buffer overflow
+- shellcode
+star: true
+category: blog
+author: MaskedFox
+description: Basics of Shellcode writing
+---
 
 
-
-
-Writing Shellcode**
+# **Writing Shellcode**
 
 ### **Steps:**
 
