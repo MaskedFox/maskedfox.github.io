@@ -120,4 +120,4 @@ description: Basics of Shellcode writing
     
     ld -0 exitshellcode exitshellcode.o
     
-    #### **Use Objdump to figure out the final shellcode**
+-   #### **Use Objdump to figure out the final shellcode**
