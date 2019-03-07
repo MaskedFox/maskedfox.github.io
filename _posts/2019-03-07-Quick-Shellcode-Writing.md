@@ -120,4 +120,5 @@ description: Basics of Shellcode writing
     
     ld -0 exitshellcode exitshellcode.o
     
--   #### **Rewrite the final code in Assembly**
+    
+-   #### **Use objdump to figure out the final shellcode**
