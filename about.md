@@ -4,14 +4,14 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p> Bio? Bio-Hacking? InfoSec, IOT, Embedded Systems, CTF, Tutorials, some Finance and Wisdom. All mainly to remind myself but, also in the hope that is helpful for the community, for the ones struggling as i did and still do. </p>
+<p> This is blog are just notes for myself based on Embedded Systems, CTF, Tutorials, some Finance and Wisdom. All mainly to remind myself, but also in the hope that is helpful for the community, for the ones struggling as i did and still do. </p>
 
 
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li> All my life i been a Jack of all Trades, however i specialize for the current job =)  </li>
+	
 	<li> I strongly believe in Loyalty, Honesty, Love & Respect. Also, i believe in Balance with one s life. You could 		also say i believe in the 80/20 rule. </Li> 
 	<li> Below you ll find some quotes that i also believe in. </li>
 	<li> Pain (/Failure) + Refeclection = Progress </li>
