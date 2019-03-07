@@ -4,11 +4,11 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p> This is blog are just notes for myself based on Embedded Systems, CTF, Tutorials, some Finance and Wisdom. All mainly to remind myself, but also in the hope that is helpful for the community, for the ones struggling as i did and still do. </p>
+<p> This is a blog with just notes for myself based on Embedded Systems, CTF, Tutorials, some Finance and Wisdom. All mainly to remind myself, but also in the hope that is helpful for the community, for the ones struggling as i did and still do. </p>
 
 
 
-<h2>Skills</h2>
+<h2>Moar Blah:</h2>
 
 <ul class="skill-list">
 	
