@@ -141,4 +141,24 @@ Disassembly of section .text:
 
 ```
 
+#include <stdio.h>
+
+char shellcode[] = "\xbb\x14\x00\x00\x00"
+ "\xb8\x01\x00\x00\x00"
+ "\xcd\x80"
+
+int main(void)
+{
+ int *ret;
+    /* defines a variable ret which is a pointer to an int. */
+ 
+ ret = (int *)&ret +2;
+    /* makes the ret variable point to an address on the stack which is located at a size 2 int away from it's own address. 
+    This is presumably the address on the stack where the return address of main() has been stored. */
+
+ (*ret) = (int)shellcode;
+    /* assigns the address of the shellcode to the return address of the main 
+     function. Thus when main() will exit, it will execute this shellcode instead of exiting normally. */
+}
 ```
+
