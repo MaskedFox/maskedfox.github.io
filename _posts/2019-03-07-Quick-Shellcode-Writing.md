@@ -163,3 +163,6 @@ int main(void)
 }
 ```
 
+```
+`root@mfox:~/Documents# gcc -ggdb -mpreferred-stack-boundary=2 -m32 -fno-stack-protector -z execstack shellcode.c -o shellcode`
+```
