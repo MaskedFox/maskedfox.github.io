@@ -166,3 +166,20 @@ int main(void)
 ```
 `root@mfox:~/Documents# gcc -ggdb -mpreferred-stack-boundary=2 -m32 -fno-stack-protector -z execstack shellcode.c -o shellcode`
 ```
+
+Next well execute our Exit program and let's see what happens:
+
+```
+root@mfox:~/Documents# 
+root@mfox:~/Documents# 
+root@mfox:~/Documents# ./exitShellCode 
+root@mfox:~/Documents# 
+root@mfox:~/Documents# ./exitShellCode 
+root@mfox:~/Documents# 
+root@mfox:~/Documents# 
+
+```
+Voila, nothing happens because it exits =)
+
+I ll start a new blog post for the second part on How to write our own Shellcode, even though we can get it from a place like
+shell-storm.com, its always good to know how to write your own in order to customize ;)
