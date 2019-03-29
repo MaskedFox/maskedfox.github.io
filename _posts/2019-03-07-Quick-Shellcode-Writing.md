@@ -164,7 +164,7 @@ int main(void)
 ```
 
 ```
-`root@mfox:~/Documents# gcc -ggdb -mpreferred-stack-boundary=2 -m32 -fno-stack-protector -z execstack shellcode.c -o shellcode`
+root@mfox:~/Documents# gcc -ggdb -mpreferred-stack-boundary=2 -m32 -fno-stack-protector -z execstack exitShellcode.c -o exitShellcode
 ```
 
 Next well execute our Exit program and let's see what happens:
@@ -172,9 +172,9 @@ Next well execute our Exit program and let's see what happens:
 ```
 root@mfox:~/Documents# 
 root@mfox:~/Documents# 
-root@mfox:~/Documents# ./exitShellCode 
+root@mfox:~/Documents# ./exitShellcode 
 root@mfox:~/Documents# 
-root@mfox:~/Documents# ./exitShellCode 
+root@mfox:~/Documents# ./exitShellcode 
 root@mfox:~/Documents# 
 root@mfox:~/Documents# 
 
