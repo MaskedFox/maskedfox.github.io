@@ -22,7 +22,7 @@ description: Basics of Shellcode writing Part 2
 
 # **Writing Shellcode Part 2**
 
-##       **Disassembling Execve:**
+## **Disassembling Execve and Executing Shellcode for Execve:**
 
 **man execve**
 
