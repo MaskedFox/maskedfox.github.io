@@ -321,5 +321,18 @@ $5 = (char (*)[13]) 0x404018
 ```
 Voila! again our Shellcode where the return address is, which means that it returns our shellcode =)
 
+In case you want to double check this is our Shellcode, disassemble the address. Let's do it!
+
+```
+(gdb) disas 0x00404018
+Dump of assembler code for function shellcode:
+   0x00404018 <+0>:	mov    ebx,0x0
+   0x0040401d <+5>:	mov    eax,0x1
+   0x00404022 <+10>:	int    0x80
+   0x00404024 <+12>:	add    BYTE PTR [eax],al
+End of assembler dump.
+
+```
+
 I ll start a new blog post for the second part on How to write our own Shellcode, even though we can get it from a place like
 shell-storm.com, its always good to know how to write your own in order to customize ;)
