@@ -181,5 +181,140 @@ root@mfox:~/Documents#
 ```
 Voila, nothing happens because it exits =)
 
+Now let's investigate what actually happens debbuging our program with GDB:
+
+```bash
+root@mfox:~/Documents# gcc -ggdb -mpreferred-stack-boundary=2 -m32 -fno-stack-protector -z execstack  shellcode.c -o shellcode
+```
+
+First Lets disassemble main:
+
+```bash
+root@mfox:~/Documents# gdb -q ./exitShellcode
+Reading symbols from ./shellcode...done.
+(gdb) disas main
+Dump of assembler code for function main:
+   0x00001189 <+0>:	push   ebp
+   0x0000118a <+1>:	mov    ebp,esp
+   0x0000118c <+3>:	sub    esp,0x4
+   0x0000118f <+6>:	call   0x1185 <__x86.get_pc_thunk.dx>
+   0x00001194 <+11>:	add    edx,0x2e6c
+   0x0000119a <+17>:	lea    eax,[ebp-0x4]
+   0x0000119d <+20>:	add    eax,0x8
+   0x000011a0 <+23>:	mov    DWORD PTR [ebp-0x4],eax
+   0x000011a3 <+26>:	mov    eax,DWORD PTR [ebp-0x4]
+   0x000011a6 <+29>:	lea    edx,[edx+0x18]
+   0x000011ac <+35>:	mov    DWORD PTR [eax],edx
+   0x000011ae <+37>:	mov    eax,0x0
+   0x000011b3 <+42>:	leave  
+   0x000011b4 <+43>:	ret    
+End of assembler dump.
+(gdb) list
+1	#include 
+2	
+3	char shellcode[] = "\xbb\x00\x00\x00\x00"
+4			   "\xb8\x01\x00\x00\x00"
+5			   "\xcd\x80";
+6	
+7	int main(void)
+8	{
+9		int *ret; 
+10	    /* defines a variable ret which is a pointer to an int. */
+(gdb) 
+11	
+12		ret = (int *)&ret +2;
+13	    	/* makes the ret variable point to an address on the stack which is located at 		a size 2 int away from it's own address. 
+14	    	This is presumably the address on the stack where the return address of main() 		has been stored. */
+15	
+16		(*ret) = (int)shellcode;
+17	    	/* assigns the address of the shellcode to the return address of the main 
+18		 function.
+19	     	Thus when main() will exit, it will execute this shellcode instead of exiting 
+20		normally. */
+(gdb) 
+21	
+22	}
+23	
+
+
+```
+
+Now let's break on line 12 and take a look at ESP ( Top of the Stack or Stack Pointer).
+
+```bash
+(gdb) b 12
+Breakpoint 1 at 0x119a: file exitShellcode.c, line 12.
+(gdb) r
+Starting program: /root/Documents/exitShellcode
+ Breakpoint 1, main () at exitShellcode.c:12
+12 ret = (int *)&ret +2;
+(gdb) x/8xw $esp
+0xbffff2b4: 0xb7fbf000 0x00000000 0xb7dffb41 0x00000001
+0xbffff2c4: 0xbffff354 0xbffff35c 0xbffff2e4 0x00000001
+
+```
+
+Cool so the above is the Top of the Stack, but what is the address `0xb7dffb41` ?
+
+Let's disassemble it and find out!
+
+```bash
+(gdb) disas 0xb7dffb41
+Dump of assembler code for function __libc_start_main:
+ 0xb7dffa50 <+0>: call 0xb7f1cc59 <__x86.get_pc_thunk.ax>
+ 0xb7dffa55 <+5>: add eax,0x1bf5ab
+ 0xb7dffa5a <+10>: push ebp
+ 0xb7dffa5b <+11>: xor edx,edx
+ 0xb7dffa5d <+13>: push edi
+ 0xb7dffa5e <+14>: push esi
+ 0xb7dffa5f <+15>: push ebx
+ 0xb7dffa60 <+16>: mov edi,eax
+ 0xb7dffa62 <+18>: sub esp,0x4c
+ 0xb7dffa65 <+21>: mov ecx,DWORD PTR [edi-0x7c]
+ 0xb7dffa6b <+27>: mov DWORD PTR [esp+0x8],eax
+ 0xb7dffa6f <+31>: mov eax,DWORD PTR [esp+0x74]
+ 0xb7dffa73 <+35>: test ecx,ecx
+ 0xb7dffa75 <+37>: je 0xb7dffa80 <__libc_start_main+48>
+ 0xb7dffa77 <+39>: mov edi,DWORD PTR [ecx]
+ --Type  for more, q to quit, c to continue without paging--q
+Quit
+```
+
+Interesting enough we find out the above address is pointing to`libc_start_main` which is responsible for starting the whole program and calling the main function =0 !
+
+Cool!
+
+So lets print our `ret pointer` and the check the Top of the stack address
+
+```bash
+(gdb) print /x ret
+$1 = 0xb7fbf000
+(gdb) x/8xw $esp
+0xbffff2b4: 0xb7fbf000 0x00000000 0xb7dffb41 0x00000001
+0xbffff2c4: 0xbffff354 0xbffff35c 0xbffff2e4 0x00000001
+
+```
+
+Right now basec on the Top of the Stack above we should know the following:
+
+0xb7fbf000 = ret pointer
+
+0x00000000 = EBP
+
+0xb7dffb41 = Return
+
+Now that we review the above lets "step" (s) in GDB to the next instruction:
+
+```bash
+(gdb) s
+16 (*ret) = (int)exitShellcode;
+
+(gdb) x/8xw $esp
+0xbffff2b4: 0xbffff2bc 0x00000000 0x00404018 0x00000001
+0xbffff2c4: 0xbffff354 0xbffff35c 0xbffff2e4 0x00000001
+(gdb) print &shellcode
+$5 = (char (*)[13]) 0x404018 
+```
+
 I ll start a new blog post for the second part on How to write our own Shellcode, even though we can get it from a place like
 shell-storm.com, its always good to know how to write your own in order to customize ;)
