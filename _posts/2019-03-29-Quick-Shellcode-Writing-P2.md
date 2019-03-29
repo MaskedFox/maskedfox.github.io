@@ -161,14 +161,66 @@ _start:
     movl $Bash, AddrToBash
     movl $11, %eax
     movl $Bash, %ebx
-    movl $AddrTobash, %ecx
+    movl $AddrToBash, %ecx
     movl $Null2, %edx
     int $0x80
     
     # Exit Routine
     
     Exit:
- 
+    movl $10, %ebx
+    movl $1, %eax
+    int $0x80 
+```
+
+Ok, lets review the above ^:
+
+```
+$11 is the syscall to execve
+$Bash is the pointer to "/bin/bash"
+$AddrToBash is the pointer to variable of Arguments
+$Null is just a Null or 0x0
+```
+
+Cool, now lets assemble the program above:
+
+```bash
+root@mfox:~/Documents# as -ggstabs -o exec.o  exec.s
+```
+
+Now let's link it and Lets run it:
+
+```bash
+root@mfox:~/Documents# ld -o exec exec.o
+root@mfox:~/Documents# ./exec 
+root@mfox:/root/Documents# 
+
+```
+
+Cool it works!, lets see the opcodes for the above program:
+
+```bash
+root@mfox:~/Documents# objdump -d exec
+
+exec:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08049000 <_start>:
+ 8049000:	c7 05 0e a0 04 08 00 	movl   $0x804a000,0x804a00e
+ 8049007:	a0 04 08 
+ 804900a:	b8 0b 00 00 00       	mov    $0xb,%eax
+ 804900f:	bb 00 a0 04 08       	mov    $0x804a000,%ebx
+ 8049014:	b9 0e a0 04 08       	mov    $0x804a00e,%ecx
+ 8049019:	ba 12 a0 04 08       	mov    $0x804a012,%edx
+ 804901e:	cd 80                	int    $0x80
+
+08049020 :
+ 8049020:	bb 0a 00 00 00       	mov    $0xa,%ebx
+ 8049025:	b8 01 00 00 00       	mov    $0x1,%eax
+ 804902a:	cd 80                	int    $0x80
+
 ```
 
 **#Important Resources:**
