@@ -307,14 +307,19 @@ Now that we review the above lets "step" (s) in GDB to the next instruction:
 
 ```bash
 (gdb) s
-16 (*ret) = (int)exitShellcode;
-
+16		(*ret) = (int)shellcode;
 (gdb) x/8xw $esp
-0xbffff2b4: 0xbffff2bc 0x00000000 0x00404018 0x00000001
-0xbffff2c4: 0xbffff354 0xbffff35c 0xbffff2e4 0x00000001
+0xbffff2b4:	0xbffff2bc	0x00000000	0xb7dffb41	0x00000001
+0xbffff2c4:	0xbffff354	0xbffff35c	0xbffff2e4	0x00000001
+(gdb) s
+22	}
+(gdb) x/8xw $esp
+0xbffff2b4:	0xbffff2bc	0x00000000	0x00404018	0x00000001
+0xbffff2c4:	0xbffff354	0xbffff35c	0xbffff2e4	0x00000001
 (gdb) print &shellcode
 $5 = (char (*)[13]) 0x404018 
 ```
+Voila! again our Shellcode where the return address is, which means that it returns our shellcode =)
 
 I ll start a new blog post for the second part on How to write our own Shellcode, even though we can get it from a place like
 shell-storm.com, its always good to know how to write your own in order to customize ;)
