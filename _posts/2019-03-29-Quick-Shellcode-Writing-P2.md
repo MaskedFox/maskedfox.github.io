@@ -351,5 +351,6 @@ Woot Woot! Annnnnd now we know how to create our own Shellcode that you can inje
 
 These serious of blogs come from the amazing tutotials from Security Tube: 
 https://youtu.be/e2jQgOVkJPM
+https://youtu.be/6XTmLamRonE
 
 And also i would recommend the book: Hacking the Art of Exploitation, Shellcode Chapter, explains really well whats happening and why. I ll Suggest to do the videos and read the book
