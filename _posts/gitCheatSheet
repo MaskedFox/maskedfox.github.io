@@ -57,6 +57,7 @@ git status
 =================================
 Useful Commands:
 ================================= 
+git commit -a -m "Modify readme"        //Add changes form all tracked files
 git reset --soft HEAD^      //Reset into staging
 git commit --amend -m "New Message"      //Change the last commit
 git reset --hard HEAD^      //Undo last commit and all changes
