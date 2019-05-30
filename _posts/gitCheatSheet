@@ -95,3 +95,7 @@ Working with Remotes:
 git remote add <name> <address>        //To add remotes
 git remote rm <name>         //To remove remotes
 git push -u <name> <branch>        //To push to remotes
+
+
+TODO: 
+push code to remote via SSH (Because of two factor authentication)
