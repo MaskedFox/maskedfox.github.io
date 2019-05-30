@@ -66,4 +66,22 @@ git reset --hard HEAD^^     //Undo last 2 commits and all changes
 =================================
 How to Share?
 ================================= 
-git remote command
+Create a Repository on Github (or any Access control of your choice)
+then Github will provide us with a URL to do the following:
+git remote add <name for new remote> <link provided by github>
+git push -u <file> master
+
+git remote -v     //will show us the fetch and push remotes
+
+
+=================================
+Pushing to Remote:
+================================= 
+git push -u origin master
+<right here, github will ask us for our credentials in order 
+to authenticate and push what we want>
+
+
+=================================
+<Title here:>
+================================= 
