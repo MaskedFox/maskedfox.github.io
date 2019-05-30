@@ -1,3 +1,15 @@
 git config --global user.name "Masked Fox" //Who gets credit for changes
 git config --global user.email iammaskedfx@gmail.com //What email yo
 git config --global color.ui true //Pretty command line colors
+
+git init //Initialized empty Git repository in same directory/.git
+
+git status
+
+git add <ReadMe.txt>
+git commit -m "create a README file."
+
+git add README.txt LICENSE.TXT
+or 
+git add --all
+
