@@ -52,3 +52,15 @@ Discard Changes:
 git status
 git checkout -- LICENSE       //Blow Away all changes since last commit
 git status
+
+
+=================================
+Useful Commands:
+================================= 
+git reset --soft HEAD^      //Reset into staging
+git commit --amend -m "New Message"
+
+
+=================================
+<Write here:>
+================================= 
