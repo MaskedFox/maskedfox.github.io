@@ -45,3 +45,10 @@ Unstaging FIles:
 git status
 git reset HEAD <file>           //this will unstage the file
 
+
+=================================
+Discard Changes:
+================================= 
+git status
+git checkout -- LICENSE       //Blow Away all changes since last commit
+git status
