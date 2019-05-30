@@ -58,7 +58,9 @@ git status
 Useful Commands:
 ================================= 
 git reset --soft HEAD^      //Reset into staging
-git commit --amend -m "New Message"
+git commit --amend -m "New Message"      //Change the last commit
+git reset --hard HEAD^      //Undo last commit and all changes
+git reset --hard HEAD^^     //Undo last 2 commits and all changes
 
 
 =================================
