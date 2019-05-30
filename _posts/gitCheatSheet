@@ -13,3 +13,19 @@ git add README.txt LICENSE.TXT
 or 
 git add --all
 
+git commit -m "add LICENSE and finish README"
+
+git log
+
+
+=================================
+Different Way to ADD:
+=================================
+git add <list of files>  //Add the list of files
+git add -all             //Add all files
+git add *.txt            //Add all txt files in current directory
+git add docs/*.txt       //Add all txt files in docs directory
+
+=================================
+Different Way to ADD:
+=================================
