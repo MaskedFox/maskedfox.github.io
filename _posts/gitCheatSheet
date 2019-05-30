@@ -83,5 +83,14 @@ to authenticate and push what we want>
 
 
 =================================
-<Title here:>
+Pulling from Remote:
 ================================= 
+git pull
+
+
+=================================
+Working with Remotes:
+================================= 
+git remote add <name> <address>        //To add remotes
+git remote rm <name>         //To remove remotes
+git push -u <name> <branch>        //To push to remotes
