@@ -64,5 +64,6 @@ git reset --hard HEAD^^     //Undo last 2 commits and all changes
 
 
 =================================
-<Write here:>
+How to Share?
 ================================= 
+git remote command
