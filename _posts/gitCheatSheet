@@ -25,7 +25,23 @@ git add <list of files>  //Add the list of files
 git add -all             //Add all files
 git add *.txt            //Add all txt files in current directory
 git add docs/*.txt       //Add all txt files in docs directory
+git add docs/           //Add all files in docs directory
+git add "*.txt"         //Add all txt files in the whole project
+
 
 =================================
-Different Way to ADD:
+git diff
 =================================
+diff --git a/LICENSE b/LICENSE
+
+ git add LICENSE
+ git diff               //No differences, since all changes are staged
+ git diff --staged     //View staged differences
+ 
+ 
+=================================
+Unstaging FIles:
+================================= 
+git status
+git reset HEAD <file>           //this will unstage the file
+
