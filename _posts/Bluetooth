@@ -14,3 +14,14 @@ and in the Audio Preferences you need to choose your Headphones as audio output.
 
 #Important Resources:
   https://www.maketecheasier.com/setup-bluetooth-in-linux/
+
+
+
+####
+Resources to make A2dp_SInk Work!
+
+https://askubuntu.com/questions/765233/pulseaudio-fails-to-set-card-profile-to-a2dp-sink-how-can-i-see-the-logs-and
+
+https://askubuntu.com/questions/879176/failed-to-set-card-profile-to-a2dp-sink-help
+
+https://wiki.debian.org/BluetoothUser/a2dp
