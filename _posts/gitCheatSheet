@@ -96,6 +96,15 @@ git remote add <name> <address>        //To add remotes
 git remote rm <name>         //To remove remotes
 git push -u <name> <branch>        //To push to remotes
 
+==========
+Git Clone:
+==========
+git clone (github url)
 
-TODO: 
+How to clone a specific Git branch?
+git clone --single-branch --branch <branchname> <remote-repo>
+
+=====
+TODO:
+=====
 push code to remote via SSH (Because of two factor authentication)
