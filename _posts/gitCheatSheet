@@ -104,6 +104,12 @@ git clone (github url)
 How to clone a specific Git branch?
 git clone --single-branch --branch <branchname> <remote-repo>
 
+how to clone a speficic Git branch with all submodules
+
+git clone --single-branch --branch <branchname> --recursive-submodules --j8 <remote-repo>
+or
+git clone --single-branch --branch <branchname> --recursive --j8 <remote-repo>
+
 =====
 TODO:
 =====
