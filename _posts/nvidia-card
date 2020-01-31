@@ -1,0 +1,10 @@
+For Debian stretch:
+
+Do:
+
+sudo apt purge --auto-remove nvidia-video-driver
+
+Follow instructions from below
+
+https://wiki.debian.org/NvidiaGraphicsDrivers
+https://wiki.debian.org/NvidiaGraphicsDrivers#stretch
