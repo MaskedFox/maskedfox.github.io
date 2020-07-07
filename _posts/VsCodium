@@ -1,23 +1,26 @@
 **Extensions:**
 
+
 autoDocstring
+
+Python
+C/C++
+Vim
 Better Comments
 Bracket Pair Colorizer
-C/C++
-Code Runner
 Code Spell Checker
-Dracula Official
-Gitlens
-Markdown All in One
-One Dark Pro
-Path Intellisense
-Polacode
-Power Mode
-Python
-Rainbow Brackets
 SonarLint
-String Manipulation
 TODO Highlight
 Trailing Spaces
-Vim
+Draculla Official
+One Dark Pro
+
 vscode-icons
+Code Runner
+
+Rainbow Brackets
+Markdown All in One
+Polacode
+
+
+
