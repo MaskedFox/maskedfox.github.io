@@ -1,8 +1,5 @@
 **Extensions:**
 
-
-autoDocstring
-
 Python
 C/C++
 Vim
@@ -14,6 +11,8 @@ TODO Highlight
 Trailing Spaces
 Draculla Official
 One Dark Pro
+autoDocstring
+Python Preview
 
 vscode-icons
 Code Runner
