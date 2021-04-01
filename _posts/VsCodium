@@ -1,5 +1,5 @@
 **Extensions:**
-
+MUST: 
 Python
 C/C++
 Vim
@@ -7,19 +7,19 @@ Bracket Pair Colorizer
 Code Spell Checker
 Better Comments
 Trailing Spaces
+vscode-icons
+Markdown All in One
 
 Draculla Official
 One Dark Pro
 autoDocstring
 Python Preview
-
-vscode-icons
 Code Runner
 
 SonarLint
 TODO Highlight
 Rainbow Brackets
-Markdown All in One
+
 Polacode
 
 
