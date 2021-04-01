@@ -3,11 +3,10 @@
 Python
 C/C++
 Vim
-Better Comments
 Bracket Pair Colorizer
 Code Spell Checker
-SonarLint
-TODO Highlight
+Better Comments
+
 Trailing Spaces
 Draculla Official
 One Dark Pro
@@ -17,6 +16,8 @@ Python Preview
 vscode-icons
 Code Runner
 
+SonarLint
+TODO Highlight
 Rainbow Brackets
 Markdown All in One
 Polacode
