@@ -6,21 +6,22 @@ install Base16 theme on gnome terminal
   Install the Brogrammer Theme
 
 
-install zsh
+-install zsh
   https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
-  *Also install this for Syntax Highlighting*
-    https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
   
-install oh-my-zsh
+-install oh-my-zsh
   https://github.com/robbyrussell/oh-my-zsh
 
-oh-my-zsh plugins:
+-oh-my-zsh plugins:
   https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 
-install powerlevel9k theme
-  https://github.com/bhilburn/powerlevel9k
-  To do:
-    https://medium.freecodecamp.org/how-you-can-style-your-terminal-like-medium-freecodecamp-or-any-way-you-want-f499234d48bc
+-install powerlevel0k theme
+
+-FuraMono or nerd font
+ 
+-zsh-autosuggestions
+-zsh-syntax-highlighting
+-zsh_command_not_found
 
 install tmux
   apt install tmux
