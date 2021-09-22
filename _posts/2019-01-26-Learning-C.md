@@ -28,11 +28,11 @@ Basics of C programming Language
 
 Master foundational concepts in the C programming language such as logical statements and arrays.
 
-### [C Programming: Modular Programming and Memory Management](https://www.edx.org/course/modular-programming-and-memory-management)
+### [C Programming: Modular Programming and Memory Management](https://www.edx.org/course/modular-programming-and-memory-management) `Finished this one on Aug, 2021. Better late than never =p`
 
 Enhance your coding skills along your path to becoming a proficient C programmer with the essential concepts of functions and pointers. Receive instant feedback on your code right within your browser.
 
-### [C Programming: Pointers and Memory Management](https://www.edx.org/course/programming-in-c-pointers-and-memory-management)
+### [C Programming: Pointers and Memory Management](https://www.edx.org/course/programming-in-c-pointers-and-memory-management) `Working on final project sept, 2021`
 
 Continue building your coding skills along your path to becoming a proficient C programmer by mastering the concept of pointers and memory management. Receive instant feedback on your code right within your browser.
 
