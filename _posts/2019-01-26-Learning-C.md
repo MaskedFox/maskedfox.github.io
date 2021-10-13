@@ -32,7 +32,7 @@ Master foundational concepts in the C programming language such as logical state
 
 Enhance your coding skills along your path to becoming a proficient C programmer with the essential concepts of functions and pointers. Receive instant feedback on your code right within your browser.
 
-### [C Programming: Pointers and Memory Management](https://www.edx.org/course/programming-in-c-pointers-and-memory-management) `Working on final project sept, 2021`
+### [C Programming: Pointers and Memory Management](https://www.edx.org/course/programming-in-c-pointers-and-memory-management) `Finished this one on sept, 2021`
 
 Continue building your coding skills along your path to becoming a proficient C programmer by mastering the concept of pointers and memory management. Receive instant feedback on your code right within your browser.
 
@@ -40,7 +40,7 @@ Continue building your coding skills along your path to becoming a proficient C 
 
 Learn the Linux Command Line interface and become a skilled user of this powerful operating system.
 
-### [C Programming: Advanced Data Types](https://www.edx.org/course/c-programming-advanced-data-types)
+### [C Programming: Advanced Data Types](https://www.edx.org/course/c-programming-advanced-data-types) `Work in progress, oct 2021`
 
 Master effective ways to store your data in the C programming language using advanced data types such as structures and linked lists. Receive instant feedback on your code right within your browser.
 
